@@ -6,3 +6,5 @@ metadata:
 spec:
   CDIImagePullPolicy: IfNotPresent
   KubeVirtImagePullPolicy: IfNotPresent
+  KWebUIImagePullPolicy: IfNotPresent
+

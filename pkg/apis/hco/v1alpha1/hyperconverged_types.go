@@ -16,6 +16,11 @@ type HyperConvergedSpec struct {
 	KubeVirtImagePullPolicy      string `json:"KubeVirtImagePullPolicy,omitempty"`
 	CDIImagePullPolicy           string `json:"CDIImagePullPolicy,omitempty"`
 	NetworkAddonsImagePullPolicy string `json:"NetworkAddonsImagePullPolicy,omitempty"`
+	KWebUIImagePullPolicy        string `json:"KWebUIImagePullPolicy,omitempty"`
+	
+	KWebUIMasterDefaultSubdomain string `json:"KWebUIMasterDefaultSubdomain,omitempty"` // optional, required if openshift-console project is missing
+	KWebUIPublicMasterHostname   string `json:"KWebUIPublicMasterHostname,omitempty"` // optional, required if openshift-console project is missing
+	KWebUIBranding               string `json:"KWebUIBranding,omitempty"`  // values: okdvirt, openshiftvirt
 }
 
 // HyperConvergedStatus defines the observed state of HyperConverged

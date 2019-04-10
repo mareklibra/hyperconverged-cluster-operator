@@ -37,6 +37,9 @@ rules:
   - pods
   - serviceaccounts
   - services
+  - secrets
+  - replicationcontrollers
+  - namespaces
   verbs:
   - get
   - list
@@ -59,6 +62,8 @@ rules:
   resources:
   - deployments
   - daemonsets
+  - replicasets
+  - statefulsets
   verbs:
   - get
   - list
@@ -108,3 +113,24 @@ rules:
   - get
   - patch
   - update
+- apiGroups:
+    - extensions
+    - apps
+  resources:
+    - deployments
+    - replicasets
+  verbs:
+    - '*'
+- apiGroups:
+    - template.openshift.io
+    - route.openshift.io
+  resources:
+    - '*'
+  verbs:
+    - '*'
+- apiGroups:
+    - oauth.openshift.io
+  resources:
+    - '*'
+  verbs:
+    - '*'

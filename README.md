@@ -32,6 +32,7 @@ oc create -f deploy/converged/crds/hco.crd.yaml
 oc create -f deploy/converged/crds/kubevirt.crd.yaml
 oc create -f deploy/converged/crds/cdi.crd.yaml
 oc create -f deploy/converged/crds/cna.crd.yaml
+oc create -f deploy/converged/crds/kwebui.crd.yaml
 ```
 
 Launch all of the Service Accounts, Cluster Role(Binding)s, and Operators.
