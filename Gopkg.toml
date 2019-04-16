@@ -24,6 +24,10 @@ required = [
   branch = "master"
 
 [[override]]
+  name = "github.com/kubevirt/web-ui-operator"
+  version = "=v0.1.0"
+
+[[override]]
   name = "github.com/go-kit/kit"
   revision = "fe6fe28ba0d54b39f27e79cddba4911b7e4fffc7"
 
