@@ -24,6 +24,7 @@ source hack/common.sh
 "${CMD}" create ns cdi
 "${CMD}" create ns kubevirt-hyperconverged
 "${CMD}" create ns cluster-network-addons-operator
+"${CMD}" create ns kubevirt-web-ui
 
 if [ "${CMD}" == "kubectl" ]; then
     # switch namespace to kubevirt
@@ -46,6 +47,9 @@ fi
 "${CMD}" create -f "${CNA_URL_PREFIX}"/network-addons-config.crd.yaml
 "${CMD}" create -f "${CNA_URL_PREFIX}"/operator.yaml
 "${CMD}" create -f "${CNA_URL_PREFIX}"/network-addons-config-example.cr.yaml
+
+# Create kubevirt-web-ui-operator
+"${CMD}" create -f "${KWEBUI_URL}" || true
 
 # Create an HCO CustomResource
 "${CMD}" create -f deploy/standard/crds/hco.cr.yaml

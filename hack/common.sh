@@ -24,6 +24,8 @@ KUBEVIRT_OPERATOR_URL=$(curl --silent "https://api.github.com/repos/kubevirt/kub
 CNA_URL_PREFIX="https://raw.githubusercontent.com/kubevirt/cluster-network-addons-operator/master/manifests/cluster-network-addons/0.3.0"
 KUBECTL=$(which kubectl 2> /dev/null)
 
+KWEBUI_URL="https://raw.githubusercontent.com/kubevirt/web-ui-operator/master/deploy/operator.yaml"
+
 if [ -z "${KUBECTL}" ]; then
     CMD=oc
 else
